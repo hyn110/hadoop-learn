@@ -8,7 +8,8 @@
     <artifactId>hadoop</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>../01_hdfs_io</module>
+        <module>../01_hdfs_mr</module>
+        <module>../02_hdfs_filesystem</module>
     </modules>
     <packaging>pom</packaging>
 
