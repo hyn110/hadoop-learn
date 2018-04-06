@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fmi110</groupId>
+    <artifactId>hadoop</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../01_hdfs_io</module>
+    </modules>
+    <packaging>pom</packaging>
+
+<dependencyManagement>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.24</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.7.3</version>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>netty</artifactId>-->
+                    <!--<groupId>io.netty</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>jsr305</artifactId>-->
+                    <!--<groupId>com.google.code.findbugs</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>2.7.3</version>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>commons-logging</artifactId>-->
+                    <!--<groupId>commons-logging</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>guava</artifactId>-->
+                    <!--<groupId>com.google.guava</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>slf4j-api</artifactId>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>slf4j-log4j12</artifactId>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>jackson-core-asl</artifactId>-->
+                    <!--<groupId>org.codehaus.jackson</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>log4j</artifactId>-->
+                    <!--<groupId>log4j</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>jackson-mapper-asl</artifactId>-->
+                    <!--<groupId>org.codehaus.jackson</groupId>-->
+                <!--</exclusion>-->
+
+                <!--<exclusion>-->
+                    <!--<artifactId>commons-codec</artifactId>-->
+                    <!--<groupId>commons-codec</groupId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>commons-lang</artifactId>-->
+                    <!--<groupId>commons-lang</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- ZK -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.9</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <!--<version>1.7.24</version>-->
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <!--<version>1.2.17</version>-->
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.40</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.2</version>
+                <configuration>
+                    <!-- 配置使用的 jdk 版本 -->
+                    <target>1.8</target>
+                    <source>1.8</source>
+                    <encoding>UTF-8</encoding>
+                    <!--项目中在 lib 目录下放置 jar 时需声明,否则打包时jar丢失-->
+                    <compilerArguments>
+                        <extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- 配置上下文路径和端口号 -->
+                    <path>/</path>
+                    <port>8083</port>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <!-- 配置后项目中没有web.xml文件时,项目不提示错误 -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+
+        </plugins>
+    </build>
+</project>
