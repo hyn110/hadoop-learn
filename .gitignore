@@ -32,3 +32,4 @@ Thumbs.db
 
 # maven output ignore
 target/
+.idea
