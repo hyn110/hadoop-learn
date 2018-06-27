@@ -10,24 +10,27 @@
     <modules>
         <module>../01_hdfs_mr</module>
         <module>../02_hdfs_filesystem</module>
+        <module>../03_hdfs_mr_detail</module>
+        <module>hadoopapi</module>
     </modules>
     <packaging>pom</packaging>
 
-<dependencyManagement>
-    <dependencies>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.24</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-    </dependencies>
-</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.24</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 
@@ -36,14 +39,14 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>2.7.3</version>
             <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>netty</artifactId>-->
-                    <!--<groupId>io.netty</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jsr305</artifactId>-->
-                    <!--<groupId>com.google.code.findbugs</groupId>-->
-                <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>netty</artifactId>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>jsr305</artifactId>-->
+            <!--<groupId>com.google.code.findbugs</groupId>-->
+            <!--</exclusion>-->
             <!--</exclusions>-->
         </dependency>
 
@@ -52,43 +55,43 @@
             <artifactId>hadoop-client</artifactId>
             <version>2.7.3</version>
             <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-logging</artifactId>-->
-                    <!--<groupId>commons-logging</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>guava</artifactId>-->
-                    <!--<groupId>com.google.guava</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>slf4j-log4j12</artifactId>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-core-asl</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>log4j</artifactId>-->
-                    <!--<groupId>log4j</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>jackson-mapper-asl</artifactId>-->
-                    <!--<groupId>org.codehaus.jackson</groupId>-->
-                <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>commons-logging</artifactId>-->
+            <!--<groupId>commons-logging</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>guava</artifactId>-->
+            <!--<groupId>com.google.guava</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>slf4j-api</artifactId>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>slf4j-log4j12</artifactId>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>jackson-core-asl</artifactId>-->
+            <!--<groupId>org.codehaus.jackson</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>log4j</artifactId>-->
+            <!--<groupId>log4j</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>jackson-mapper-asl</artifactId>-->
+            <!--<groupId>org.codehaus.jackson</groupId>-->
+            <!--</exclusion>-->
 
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-codec</artifactId>-->
-                    <!--<groupId>commons-codec</groupId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>commons-lang</artifactId>-->
-                    <!--<groupId>commons-lang</groupId>-->
-                <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>commons-codec</artifactId>-->
+            <!--<groupId>commons-codec</groupId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<artifactId>commons-lang</artifactId>-->
+            <!--<groupId>commons-lang</groupId>-->
+            <!--</exclusion>-->
             <!--</exclusions>-->
         </dependency>
 
